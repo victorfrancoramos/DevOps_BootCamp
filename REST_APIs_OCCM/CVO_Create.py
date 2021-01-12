@@ -1,10 +1,5 @@
 # -*- coding: cp1252 -*-
 import requests
-import json
-from http.client import HTTPSConnection
-from base64 import b64encode
-import ssl
-import texttable as tt
 import settings_config as cfg
 
 import urllib3
@@ -18,16 +13,16 @@ def login(req, base_url, username, password):
     header = {"content-type": "application/json"}
 
     url_ss = base_url + "/occm/system/support-services"
-    # Obtenemos domain, audience y clientId necesarios para payload de autenticación
+    # We get domain, audience and clientId required for the authentication payload
     r = req.get(url=url_ss, headers=header, verify=False)
 
-    respuesta = r.json()
-    print("domain: ", respuesta["portalService"]["auth0Information"]["domain"])
-    domain = respuesta["portalService"]["auth0Information"]["domain"]
-    print("audience: ", respuesta["portalService"]["auth0Information"]["audience"])
-    audience = respuesta["portalService"]["auth0Information"]["audience"]
-    print("clientId: ", respuesta["portalService"]["auth0Information"]["clientId"])
-    clientId = respuesta["portalService"]["auth0Information"]["clientId"]
+    response = r.json()
+    print("domain: ", response["portalService"]["auth0Information"]["domain"])
+    domain = response["portalService"]["auth0Information"]["domain"]
+    print("audience: ", response["portalService"]["auth0Information"]["audience"])
+    audience = response["portalService"]["auth0Information"]["audience"]
+    print("clientId: ", response["portalService"]["auth0Information"]["clientId"])
+    clientId = response["portalService"]["auth0Information"]["clientId"]
 
     auth_url = "https://" + domain + "/oauth/token"
 
@@ -37,8 +32,8 @@ def login(req, base_url, username, password):
     # Hacemos POST para obtener token
     a = req.post(url=auth_url, json=auth_payload, headers=header, verify=False)
 
-    respuesta = a.json()
-    token = respuesta["access_token"]
+    response = a.json()
+    token = response["access_token"]
 
     return token
 
@@ -54,7 +49,7 @@ def create_cvo_aws(req, payload, token):
 def main():
     s = requests.Session()
     token = login(s, cfg.base_url, cfg.username, cfg.password)
-    payload = {"name": "CVO_Jose",
+    payload = {"name": "CVO_DevOps",
                "volume": {
                    "exportPolicyInfo": {
                        "policyType": "custom",
