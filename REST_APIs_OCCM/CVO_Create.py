@@ -29,7 +29,7 @@ def login(req, base_url, username, password):
     auth_payload = {"grant_type": "password", "username": username, "password": password, "audience": audience,
                     "scope": "profile", "client_id": clientId}
 
-    # Hacemos POST para obtener token
+    # We issue a POST command to get the token
     a = req.post(url=auth_url, json=auth_payload, headers=header, verify=False)
 
     response = a.json()
