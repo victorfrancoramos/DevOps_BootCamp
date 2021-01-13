@@ -1,3 +1,5 @@
+# Source kindly shared by Jose Gomez @NetApp
+
 import requests
 import time
 import json
