@@ -1,15 +1,14 @@
 # pstt-devops-demo_occm
 
-**NOTE:** _This GIT repository is forked from hashbangbinbash/storagegrid-workshop (https://github.com/hashbangbinbash/storagegrid-workshop). All credit goes to Neil Morris for the code. I sincerely thank him for letting me reuse a part of the "Partner Enablement workshop for StorageGRID Integration with 11.4". If you like this, I recommend attending to his full delivery, as there is a lot more to enjoy there!.
-Neil designed this repository as public and is free to use for colleagues. If you plan to reuse the code, please let him know beforehand at hashbangbinbash (https://github.com/hashbangbinbash)._
+**NOTE:** _This GIT repository is forked from  josem-gomez/REST_APIs_OCCM  (https://github.com/josem-gomez/REST_APIs_OCCM). All credit goes to Jose Manuel Gómez for the code. I sincerely thank him for sharing the original code. Though it saved me a lot fo time, I had to modify several things to make it work, as well as adding some missing files._
 
-This code will be used for one of the full demonstration labs for "PSTT - DevOps" and it intends to demonstrate the joint use of several technologies as covered in the training (In this particular example: Object Storage, Ansible and Python).
+This code will be used for one of the full demonstration for "PSTT - DevOps" and it intends to demonstrate the joint use of several technologies as covered in the training (In this particular example: OCCM, RESTful APIs, Kubernetes, BASH scripts and Python).
 
-The LAB environment used for this practice exercise is:
-- Enterprise Object Storage in the Data Fabric with StorageGRID v1.0
-- https://labondemand.netapp.com/lab/sl10610
-- https://labondemand.netapp.com/system/files/lab_guides/SL10610_Enterprise_Object_Storage_in_the_Data_Fabric_with_StorageGRID-082720.pdf
-- Neil's proposed lab walkthrough will be shared during delivery.
+The LAB environment used for this practice exercise is (be aware that to run the automation it may take up to 90 minutes):
+- Cloud Manager to Move Kubernetes Application Workloads Between Hybrid-Cloud Endpoints v1.0
+- https://labondemand.netapp.com/lab/sl10575-k8s
+- https://labondemand.netapp.com/system/files/lab_guides/SL10575_OCCM_k8s_1.pdf
+- The idea is to reproduce the lab walkthrough using Python access to the OCCM RESTful APIs.
 
 Please be aware that as technologies used are continually evolving, and there are several involved, issues may arise when trying to implement this lab with newer versions os the software. You will have to troubleshoot, and this is an intended part of the learning process and the fun!
 
