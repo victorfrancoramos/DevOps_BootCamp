@@ -1,6 +1,8 @@
 # -*- coding: cp1252 -*-
 # Source kindly shared by Jose Gomez @NetApp
 
+# NOTE: This code is still WIP and not yet working
+
 import requests
 import settings_config as cfg
 

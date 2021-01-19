@@ -1,5 +1,7 @@
 # Source kindly shared by Jose Gomez @NetApp
 
+# NOTE: This code is still WIP and not yet working
+
 import requests
 import time
 import json

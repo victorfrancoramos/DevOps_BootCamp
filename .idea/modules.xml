@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/DevOps_BootCamp.iml" filepath="$PROJECT_DIR$/.idea/DevOps_BootCamp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pstt-devops-demo_occm/.idea/pstt-devops-demo_occm.iml" filepath="$PROJECT_DIR$/../pstt-devops-demo_occm/.idea/pstt-devops-demo_occm.iml" />
     </modules>
   </component>
 </project>
