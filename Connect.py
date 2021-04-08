@@ -42,7 +42,7 @@ def get_current_user(req, token):
     cuser_url = cfg.base_url + "/occm/api/auth/current-user"
     s = req.get(url=cuser_url, headers=hed, verify=False)
     response = s.json()
-    print("Current user: ", response["publicId"])
+    print("Current user RESPONSE: ", response)
 
 
 def main():
