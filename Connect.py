@@ -4,18 +4,16 @@ import requests as req
 import settings_config as cfg
 
 import urllib3
-
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
 
 def login(req, base_url, username, password):
     print("Getting token...")
 
     header = {"content-type": "application/json"}
 
-    url_ss = base_url + "/occm/api/occm/system/support-services"
+    ss_url = base_url + "/occm/api/occm/system/support-services"
     # We get domain, audience and clientId required for the authentication payload
-    r = req.get(url=url_ss, headers=header, verify=False)
+    r = req.get(url=ss_url, headers=header, verify=False)
 
     response = r.json()
     print("domain: ", response["portalService"]["auth0Information"]["domain"])
@@ -35,15 +33,16 @@ def login(req, base_url, username, password):
 
     response = a.json()
     token = response["access_token"]
-    token = response["access_token"]
 
     return token
 
 
 def get_current_user(req, token):
     hed = {'Authorization': 'Bearer ' + token}
-    s = req.get(url="https://occm.demo.netapp.com:443/occm/api/auth/current-user", headers=hed, verify=False)
-    print(s)
+    cuser_url = cfg.base_url + "/occm/api/auth/current-user"
+    s = req.get(url=cuser_url, headers=hed, verify=False)
+    response = s.json()
+    print("Current user: ", response["publicId"])
 
 
 def main():
