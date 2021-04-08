@@ -1,0 +1,17 @@
+Show Developer mode in Chrome > Network
+
+User management operations > auth
+
+{
+   "email": "rt1547497@demo.netapp.com",
+   "password": "Netapp1!"
+}
+
+OAuth 2.0
+{
+    "grant_type": "password",
+    "username": "YOUR_EMAIL_ADDRESS",
+    "password": "YOUR_PASSWORD",
+    "audience": "https://api.cloud.netapp.com",
+    "client_id": "QC3AgHk6qdbmC7Yyr82ApBwaaJLwRrNO"
+}
