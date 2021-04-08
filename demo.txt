@@ -15,3 +15,27 @@ OAuth 2.0
     "audience": "https://api.cloud.netapp.com",
     "client_id": "QC3AgHk6qdbmC7Yyr82ApBwaaJLwRrNO"
 }
+
+With this we get a token that lasts 24 hours
+
+RESOURCES:
+SUPPORT: Accessing and using the API with Python
+https://library.netapp.com/ecmdocs/ECMP12519305/html/GUID-7E7D1673-CEBB-4701-8B6D-9C2E492CAF84.html
+Code samples:
+https://library.netapp.com/ecmdocs/ECMP12519305/html/GUID-CD83DFA9-C81A-4742-AEF9-2B0BA68CAB0E.html
+Python demo code:
+https://library.netapp.com/ecmdocs/ECMP12519305/html/GUID-24626ACA-60AA-4027-AF4E-AE5A9D12359E.html
+
+Download and install the latest python version:
+https://www.python.org/downloads/
+
+In Windows:
+    We run it with "py"
+    pip is installed with python, thus we can run it with
+        py -m pip --version
+    Linux
+        sudo apt install python3-pip
+    Install libraries imported:
+            py -m pip install requests
+            py -m pip install urllib3
+
